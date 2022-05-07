@@ -1,0 +1,25 @@
+{
+    "dbConfig":{
+        "host": "DB_HOST",
+        "port": "DB_PORT",
+        "database": "DB_DATABASE",
+        "user": "DB_USER",
+        "password": "DB_PASSWORD"
+    },
+    "redisConfig": {
+        "url": "REDIS_URL",
+        "username": "REDIS_USERNAME",
+        "password": "REDIS_PASSWORD"
+    },
+    "elasticConfig": {
+        "url": "ELASTIC_URL"
+    },
+    "pbkdf2_salt": "PBKDF2_SALT",
+    "aes_key": "AES_KEY",
+    "old_jtw_token_secret": "OLD_JWT_TOKEN_SECRET",
+    "new_jtw_token_secret": "NEW_JWT_TOKEN_SECRET",
+    "cert_common": {
+        "public_key_path": "CERT_COMMON_PUBLIC_KEY_PATH",
+        "private_key_path": "CERT_COMMON_PRIVATE_KEY_PATH"
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "appenders": {
+        "log": {
+            "type": "dateFile",
+            "layout": { "type": "colored" },
+            "filename": "logs/app.log",
+            "pattern": "yyyy-MM-dd",
+            "compress": false,
+            "daysToKeep": 30
+        },
+        "body_log": {
+            "type": "dateFile",
+            "layout": { "type": "colored" },
+            "filename": "logs/body_app.log",
+            "pattern": "yyyy-MM-dd",
+            "compress": false,
+            "daysToKeep": 30
+        },
+        "access_log": {
+            "type": "dateFile",
+            "layout": { "type": "colored" },
+            "filename": "logs/access_app.log",
+            "pattern": "yyyy-MM-dd",
+            "compress": false,
+            "daysToKeep": 30
+        },
+        "out": {
+            "type": "stdout"
+        },
+        "logstash_access_log": {
+            "type": "km-log4js-logstash-tcp",
+            "layout": { "type": "pattern", "pattern": "[%d{ISO8601}] [%p] %c - %h %z %m%n" },
+            "host": "localhost",
+            "port": 5050,
+            "service": {
+                "application": "app",
+                "category": "access_log"
+            }
+        },
+        "logstash_log": {
+            "type": "km-log4js-logstash-tcp",
+            "layout": { "type": "pattern", "pattern": "[%d{ISO8601}] [%p] %c - %h %z %m%n" },
+            "host": "localhost",
+            "port": 5050,
+            "service": {
+                "application": "app",
+                "category": "log"
+            }
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": ["out"],
+            "level": "trace"
+        },
+        "log": {
+            "appenders": ["log", "out"],
+            "level": "trace"
+        },
+        "body_log": {
+            "appenders": ["body_log"],
+            "level": "trace"
+        },
+        "access_log": {
+            "appenders": ["access_log", "out"],
+            "level": "info"
+        }
+    },
+    "pm2": true,
+    "pm2InstanceVar": "INSTANCE_ID"
+}

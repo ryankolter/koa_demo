@@ -1,0 +1,15 @@
+<script type="text/javascript" src='/static/js/test.js'></script>
+<p><%= title %></p>
+
+<form action="/api_v1/register" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrf %>" />
+    <input type="email" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="Password" />
+    <button type="submit">Register</button>
+</form>
+
+<form action="/api_v1/upload_single_file" method="POST" enctype="multipart/form-data">
+    <input type="hidden" id="_csrf" name="_csrf" value="<%= csrf %>" />
+    <input type="file" name="avatar"/>
+    <button type="submit">upload</button>
+</form>

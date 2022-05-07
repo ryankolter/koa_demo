@@ -1,0 +1,43 @@
+{
+  "name": "koa_demo",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "./node_modules/.bin/node-pg-migrate"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.16.0",
+    "@koa/cors": "^3.1.0",
+    "@koa/multer": "^3.0.0",
+    "argon2": "^0.28.3",
+    "config": "^3.3.6",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ip": "^1.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "km-log4js-logstash-tcp": "^1.0.4",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-compress": "^5.1.0",
+    "koa-conditional-get": "^3.0.0",
+    "koa-csrf": "^3.0.8",
+    "koa-etag": "^4.0.0",
+    "koa-helmet": "^6.1.0",
+    "koa-log4": "^2.3.2",
+    "koa-router": "^10.1.1",
+    "koa-session": "^6.2.0",
+    "koa-static-server": "^1.5.2",
+    "koa-views": "^8.0.0",
+    "log4js": "^6.3.0",
+    "multer": "^1.4.4",
+    "node-pg-migrate": "^6.2.0",
+    "pg": "^8.7.1",
+    "pg-pool": "^3.4.1",
+    "redis": "^4.0.1"
+  }
+}
