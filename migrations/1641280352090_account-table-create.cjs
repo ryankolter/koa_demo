@@ -54,8 +54,18 @@ exports.up = pgm => {
             default: pgm.func('current_timestamp'),
         }
     })
+
+    pgm.createIndex('account', 'mobile', {
+        name: 'account_mobile_idx',
+        method: 'btree'
+    })
+
+    pgm.createIndex('account', 'email', {
+        name: 'account_email_idx',
+        method: 'btree'
+    })
 };
 
 exports.down = pgm => {
-
+    pgm.dropTable('account');
 };

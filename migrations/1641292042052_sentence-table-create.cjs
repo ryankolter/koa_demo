@@ -33,4 +33,9 @@ exports.up = pgm => {
     })
 };
 
-exports.down = pgm => {};
+exports.down = pgm => {
+    pgm.dropIndex('sentence', 'word_list', {
+        name: 'sentence_word_list_gin_idx'
+    })
+    pgm.dropTable('sentence');
+};

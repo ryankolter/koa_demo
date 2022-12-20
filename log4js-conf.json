@@ -8,14 +8,6 @@
             "compress": false,
             "daysToKeep": 30
         },
-        "body_log": {
-            "type": "dateFile",
-            "layout": { "type": "colored" },
-            "filename": "logs/body_app.log",
-            "pattern": "yyyy-MM-dd",
-            "compress": false,
-            "daysToKeep": 30
-        },
         "access_log": {
             "type": "dateFile",
             "layout": { "type": "colored" },
@@ -35,10 +27,6 @@
         },
         "log": {
             "appenders": ["log", "out"],
-            "level": "trace"
-        },
-        "body_log": {
-            "appenders": ["body_log"],
             "level": "trace"
         },
         "access_log": {

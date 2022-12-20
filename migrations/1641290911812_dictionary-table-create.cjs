@@ -55,4 +55,13 @@ exports.up = pgm => {
     pgm.addConstraint('dictionary', 'dictionary_word_property_explain_unique_constraint', {"unique": ['word', 'property', 'explain']})
 };
 
-exports.down = pgm => {};
+exports.down = pgm => {
+    pgm.dropConstraint('dictionary', 'dictionary_word_property_explain_unique_constraint');
+    pgm.dropIndex('dictionary', 'difficulty', {
+        name: 'dictionary_difficulty_idx'
+    })
+    pgm.dropIndex('dictionary', 'word', {
+        name: 'dictionary_word_idx'
+    })
+    pgm.dropTable('dictionary');
+};
