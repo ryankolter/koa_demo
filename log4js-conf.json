@@ -26,26 +26,6 @@
         },
         "out": {
             "type": "stdout"
-        },
-        "logstash_access_log": {
-            "type": "km-log4js-logstash-tcp",
-            "layout": { "type": "pattern", "pattern": "[%d{ISO8601}] [%p] %c - %h %z %m%n" },
-            "host": "localhost",
-            "port": 5050,
-            "service": {
-                "application": "app",
-                "category": "access_log"
-            }
-        },
-        "logstash_log": {
-            "type": "km-log4js-logstash-tcp",
-            "layout": { "type": "pattern", "pattern": "[%d{ISO8601}] [%p] %c - %h %z %m%n" },
-            "host": "localhost",
-            "port": 5050,
-            "service": {
-                "application": "app",
-                "category": "log"
-            }
         }
     },
     "categories": {

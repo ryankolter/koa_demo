@@ -1,5 +1,5 @@
 {
-    "routerPrefix": "/api_v1",
+    "routerPrefix": "/api",
     "default": true,
     "dbConfig":{
         "max": 10,

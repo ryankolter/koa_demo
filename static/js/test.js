@@ -8343,7 +8343,7 @@ function flushJobs(seen) {
                 if (true && check(job)) {
                     continue;
                 }
-                // console.log(`running:`, job.id)
+                // log.info(`running:`, job.id)
                 callWithErrorHandling(job, null, 14 /* SCHEDULER */);
             }
         }
