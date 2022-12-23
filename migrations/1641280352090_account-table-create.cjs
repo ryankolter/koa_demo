@@ -67,5 +67,11 @@ exports.up = pgm => {
 };
 
 exports.down = pgm => {
+    pgm.dropIndex('account', 'email', {
+        name: 'account_email_idx'
+    })
+    pgm.dropIndex('account', 'mobile', {
+        name: 'account_mobile_idx'
+    })
     pgm.dropTable('account');
 };
